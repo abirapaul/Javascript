@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript</title>
+</head>
+
+<body>
+<form name="frm">
+date of birth
+<select name="day">
+	<option value="" selected>-Day-</option>
+    <script>
+	for(d=1;d<=31;d++){
+		document.write('<option value="'+d+'" >'+d+'</option>')
+	}
+	</script>
+</select>
+<select name="month">
+     <option value="" selected>-Month-</option>
+      <script>
+      for(m=1;m<13;m++){
+		  document.write('<option value="'+m+'">'+m+'</option>')
+	  }
+      </script>
+</select>
+<select name="year">
+     <option value="" selected>-Year-</option>
+     <script>
+     var dt= new Date();
+	 var cy=dt.getFullYear();
+	 for(var y=1900; y<=cy; y++){
+		 document.write('<option value="'+y+'">'+y+'</option>')
+	 }
+     </script>
+     </select>
+</form>
+<script>
+var x=11;
+do{
+	document.write(x);
+	x++;
+}while(x<=10);
+</script>
+
+<form name="frm">
+Password<input type="password" name="pass" onBlur="check_pass(this.value)"><span id="msg"></span>
+</form>
+<script>
+function check_pass(pass){
+	pass_len=pass.length;
+	if(pass_len < 6){
+		document.getElementById('msg').innerHTML='Password is weak';
+		document.getElementById('msg').style.color='red';
+	}
+	else if(pass_len >=6 && pass_len<=9){
+		document.getElementById('msg').innerHTML='Password is medium';
+		document.getElementById('msg').style.color='brown';
+	}
+	else{
+		document.getElementById('msg').innerHTML='Password is strong';
+		document.getElementById('msg').style.color='green';
+	}
+}
+</script>
+</body>
+</html>

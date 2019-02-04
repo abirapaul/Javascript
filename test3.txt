@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function season(month){
+	if(month=="November" || month=="December" || month=="January"){
+		alert("Coldest time of the year");
+	}
+}
+</script>
+</head>
+
+<body>
+<script>
+var month=Array("January","February","March","April","May","June","July","Agugst","September","October","November","December");
+</script>
+<select name="month" onChange="season(this.value)">
+ <option value="" selected>-Select-</option>
+ <script>
+ 	for(var i=0; i<=11; i++){
+		document.write('<option value="'+month[i]+'">'+month[i]+'</option>')
+	}
+ </script>
+</select>
+<script>
+var str="Hello world ajbdslj ljfdlsk llds ojol ojowrej";
+arr1=str.split(" ")
+
+for(var i=0; i<arr1.length; i++){
+	document.write(arr1[i]+"<br>");
+}
+</script>
+</body>
+</html>
